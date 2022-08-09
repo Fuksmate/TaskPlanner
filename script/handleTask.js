@@ -12,26 +12,35 @@ const createTask = (task, index) => {
   taskElement.id = index;
   taskElement.classList.add("task");
   taskElement.innerHTML = name;
+  taskElement.addEventListener("dragstart", () => {
+    taskElement.classList.add("dragging");
+  });
   todoContainer.appendChild(taskElement);
 };
-
 const displayAllTasks = () => {
-  tasks.forEach((task, index) => {
-    console.log(index);
-    createTask(task, index);
-  });
+  if (tasks !== null) {
+    if (Array.isArray(tasks)) {
+      tasks.forEach((task, index) => {
+        createTask(task, index);
+      });
+    } else {
+      let taskIndex = tasks == null ? 0 : tasks.length;
+      createTask(tasks, taskIndex);
+    }
+  }
 };
-
 const saveInLocalStorage = (task) => {
-  task["position"] = defaultTaskPosition;
+  task["position"] = defaultTaskPosition; //set default position
+  tasks = JSON.parse(localStorage.getItem("task"));
+  let taskIndex = tasks == null ? 0 : tasks.length;
+
+  createTask(task, taskIndex);
   if (tasks) {
-    tasks = JSON.parse(localStorage.getItem("task"));
     let tasksArr = tasks.length > 0 ? [...tasks, task] : [task];
     localStorage.setItem("task", JSON.stringify(tasksArr));
   } else {
     localStorage.setItem("task", JSON.stringify(task));
   }
-  createTask(task);
 };
 
 modalButton.addEventListener("click", () => {
@@ -42,7 +51,5 @@ modalButton.addEventListener("click", () => {
   });
   saveInLocalStorage(task);
 });
-
-console.log(tasks);
 
 displayAllTasks();
