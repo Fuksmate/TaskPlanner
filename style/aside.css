@@ -1,0 +1,52 @@
+.aside {
+    width: 20%;
+    height: 100%;
+    background-color: var(--color--tertiary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aside-btn {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 55px;
+    border-radius: 10px;
+    background-color: var(--color--background);
+    opacity: 0.6;
+    color: var(--color--primary);
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.aside-btn:hover {
+    opacity: 1;
+}
+
+.aside-btn-content {
+    transition: all 0.5s ease;
+}
+
+.aside-btn:hover .aside-btn-content {
+    transform: rotate(90deg);
+}
+
+.aside-btn-information {
+    display: none;
+    font-size: 16px;
+    color: var(--color--primary);
+    white-space: nowrap;
+    font-family: 'Roboto Mono', monospace;
+    position: absolute;
+    top: -40px;
+}
+
+.aside-btn:hover .aside-btn-information {
+    display: block;
+}
