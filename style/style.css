@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.dark {
+    --color--primary: #ebebeb;
+    --color--secondary: #393E6F;
+    --color--tertiary: #292233;
+    --color--background: #1a1118;
+}
+
+body.light {
+    --color--primary: #ebebeb;
+    --color--secondary: #393E6F;
+    --color--tertiary: #292233;
+    --color--background: #1a1118;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color--background);
+    color: var(--color--primary);
+}
+
+.aside {
+    width: 20%;
+    height: 100%;
+    background-color: var(--color--tertiary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aside-btn {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 55px;
+    border-radius: 10px;
+    background-color: var(--color--background);
+    opacity: 0.6;
+    color: var(--color--primary);
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.aside-btn:hover {
+    opacity: 1;
+}
+
+.aside-btn-content {
+    transition: all 0.5s ease;
+}
+
+.aside-btn:hover .aside-btn-content {
+    transform: rotate(90deg);
+}
+
+.main {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}

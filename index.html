@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Planner</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/nav.css" />
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/task-section.css" />
+
+    <script defer src="script/app.js"></script>
+  </head>
+  <body class="dark">
+    <aside class="aside">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><span class="nav-item-name">Home</span></li>
+          <li class="nav-item"><span class="nav-item-name">Task</span></li>
+          <li class="nav-item"><span class="nav-item-name">Projects</span></li>
+          <li class="nav-item"><span class="nav-item-name">Settings</span></li>
+        </ul>
+      </nav>
+      <button class="aside-btn">
+        <span class="aside-btn-content">+</span>
+      </button>
+    </aside>
+    <main class="main">
+      <header class="header">
+        <ul class="header-list">
+          <li class="header-item">
+            <span class="header-item-name">TODO</span>
+          </li>
+          <li class="header-item">
+            <span class="header-item-name">Progres</span>
+          </li>
+          <li class="header-item">
+            <span class="header-item-name">Review Ready</span>
+          </li>
+          <li class="header-item">
+            <span class="header-item-name">DONE</span>
+          </li>
+        </ul>
+      </header>
+      <section class="task-section">
+        <div class="container-on-task"></div>
+        <div class="container-on-task"></div>
+        <div class="container-on-task"></div>
+        <div class="container-on-task"></div>
+      </section>
+    </main>
+  </body>
+</html>
