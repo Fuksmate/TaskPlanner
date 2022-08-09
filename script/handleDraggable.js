@@ -1,6 +1,8 @@
 const taskDraggable = document.querySelectorAll(".task");
 const containers = document.querySelectorAll(".container-on-task");
 
+taskDraggable;
+
 taskDraggable.forEach((taskDraggable) => {
   taskDraggable.addEventListener("dragstart", () => {
     taskDraggable.classList.add("dragging");
