@@ -25,10 +25,56 @@
 
 .task {
     width: 100%;
-    min-height: 200px;
+    min-height: 80px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-around;
+    background-color: var(--color--background);
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px 2px var(--color--secondary);
+    font-size: 18px;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+}
+
+.task-name {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: red;
+}
+
+.todo .task-led {
+    background-color: #690;
+    box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
+}
+
+.progress .task-led {
+    background-color: #940;
+    box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
+}
+
+
+.done .task-led {
+    background-color: #A90;
+    box-shadow: #000 0 -1px 7px 1px, inset #660 0 -1px 9px, #DD0 0 2px 12px;
+}
+
+.review .task-led {
+    background-color: #4AB;
+    box-shadow: #000 0 -1px 7px 1px, inset #006 0 -1px 9px, #06F 0 2px 14px;
+}
+
+.task-led {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
 }

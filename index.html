@@ -39,7 +39,7 @@
             <span class="header-item-name">TODO</span>
           </li>
           <li class="header-item">
-            <span class="header-item-name">Progres</span>
+            <span class="header-item-name">Progress</span>
           </li>
           <li class="header-item">
             <span class="header-item-name">Review Ready</span>
@@ -54,7 +54,7 @@
           <div class="container-on-task todo"></div>
         </div>
         <div class="container">
-          <div class="container-on-task progres"></div>
+          <div class="container-on-task progress"></div>
         </div>
         <div class="container">
           <div class="container-on-task review"></div>
@@ -87,8 +87,18 @@
             name="category"
             placeholder="Category"
           />
+          <select class="modal-select" name="cars">
+            <option value="Important">Important</option>
+            <option value="Normal">Normal</option>
+          </select>
+
           <button class="modal-btn" type="button">Create Task</button>
         </form>
+      </div>
+    </div>
+    <div class="task-modal-shadow">
+      <div class="task-modal-container">
+        <span class="modal-close">X</span>
       </div>
     </div>
   </body>

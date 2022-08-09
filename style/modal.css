@@ -70,6 +70,19 @@
     padding: 0 10px;
 }
 
+.modal-select {
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--color--primary);
+    border: none;
+    border-bottom: 2px solid var(--color--secondary);
+    background-color: var(--color--background);
+    outline: none;
+    padding: 0 10px;
+}
+
 .modal-btn {
     width: 50%;
     height: 50px;
@@ -86,6 +99,32 @@
 
 .modal-btn:hover {
     transform: scale(1.05);
+}
+
+.task-modal-shadow {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.task-modal-container {
+    width: 600px;
+    height: 600px;
+    background-color: var(--color--background);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 8px var(--color--secondary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
 }
 
 
